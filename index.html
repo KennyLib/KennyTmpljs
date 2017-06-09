@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="/H1.html" rel="import" id="h1tmp" />
+    <script src="/KennyTmpl/KennyTmpl.js"></script>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <script>
+        var data = {
+            name: "Kenny",
+            age: 29
+        };
+        var tempHTML = h1tmp.import.body.innerHTML;
+        KennyTmpl.init(tempHTML, data, function (html) {
+            document.getElementById("h1").innerHTML = html;
+        });
+    </script>
+</body>
+</html>
